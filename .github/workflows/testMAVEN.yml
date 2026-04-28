@@ -21,7 +21,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: deploy tomcat to appserver
-      run: curl -v -u admin:admin -T /home/runner/work/etoe/etoe/target/Ecomm.war 'http://100.24.9.199/manager/text/deploy?path=Ecomm.war'
+      run: curl -v -u admin:admin -T target/Ecomm.war 'http://100.24.9.199/manager/text/deploy?path=Ecomm.war&update=true'
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

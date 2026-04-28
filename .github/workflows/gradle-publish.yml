@@ -1,7 +1,7 @@
 name: deploy Ecomapp to tomcatserver.GithubActions
 on:
   push:
-   branches: ["master"]
+   branches: ["feature"]
 jobs:
    build:
      runs-on: ubuntu-latest
@@ -14,7 +14,7 @@ jobs:
          distribution: 'temurin'
          cache: gradle
       - name: build with gradle
-        run grdle -8 package ..file pom.xml
+        run: grdle -8 package ..file pom.xml
         
       
          

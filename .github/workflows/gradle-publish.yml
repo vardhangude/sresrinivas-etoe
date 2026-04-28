@@ -1,21 +1,23 @@
-name: deploy Ecomapp to tomcatserver.GithubActions
+name: Deploy Ecomapp to Tomcat (GitHub Actions)
+
 on:
   push:
-   branches: ["feature"]
+    branches: ["feature"]
+
 jobs:
-   build:
-     runs-on: ubuntu-latest
-     steps:
-     - uses: actions/checkout@v4
-     - name: setup jdk 17
-     - uses: actions/setup-java@v4
-       with:
-         java-version: '17'
-         distribution: 'temurin'
-         cache: gradle
-      - name: build with gradle
-        run: grdle -8 package ..file pom.xml
-        
-      
-         
-         
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn clean package

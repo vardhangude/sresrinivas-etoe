@@ -256,8 +256,8 @@ select tomcat8 at tht right side pane
 version:8.5.43 or 8.5.54
 $cd /opt
 
-$wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz.asc
-https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz
+$wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz
+
 ================
 https://archive.apache.org/dist/tomcat/tomcat-8/
 ===================================

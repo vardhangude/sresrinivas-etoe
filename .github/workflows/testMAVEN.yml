@@ -22,7 +22,7 @@ jobs:
 
     - name: Deploy to Tomcat
       run: |
-        curl -v -u admin:admin \
+        curl -v -u {{TOMCAT_USER_NAME}}:{{TOMCAT_USER_PWD}} \
         -T target/Ecomm.war \
         "http://100.24.9.199:8080/manager/text/deploy?path=/Ecomm&update=true"
     
